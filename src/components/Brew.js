@@ -7,17 +7,34 @@ const Brew = (brew) => {
     return n.toFixed(2)
   }
 
+  function getBrewTypeClass(type) {
+    let classType = 'Brew-item-label Brew-item-type'
+    switch (type) {
+      case 'IPA':
+        return classType.concat('IPA')
+      case 'Porter':
+        return classType.concat('Porter')
+      case 'Black IPA':
+        return classType.concat('BlackIPA')
+      default:
+        return classType.concat('Default')
+    }
+  }
+
   return (
-    <ul className="Brew-item">
-      <li>Name: { brew.name }</li>
-      <li>Type: { brew.type }</li>
-      <li>Size: { brew.size }</li>
-      <li>Volume remaining: { formatNumber(brew.volumeRemaining) }</li>
-      <li>Alcohol: { brew.alcohol }</li>
-      <li>Date: { brew.date }</li>
-      <li>Brewer: { brew.brewer }</li>
-      <li>Comment: { brew.comment }</li>
-    </ul>
+    <div className="Brew-item">
+      <img src="img/placeholder.png" width="100%" height="200px" alt="Beer" />
+      <div className={ getBrewTypeClass(brew.type) }></div>
+      <h2>{ brew.name }</h2>
+      <hr className="featurette"/>
+      <p>Date: <b>{ brew.date }</b></p>
+      <p>Type: <b>{ brew.type }</b></p>
+      <p>Size: <b>{ brew.size }L</b></p>
+      <p>Volume remaining: <b>{ formatNumber(brew.volumeRemaining) }L</b></p>
+      <p>Alcohol: <b>{ brew.alcohol }%</b></p>
+      <p>Brewer: <b>{ brew.brewer }</b></p>
+      <p>Comment: { brew.comment }</p>
+    </div>
   )
 }
 

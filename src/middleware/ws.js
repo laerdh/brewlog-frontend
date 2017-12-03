@@ -10,8 +10,7 @@ const wsService = store => next => action => {
       var stompClient = Stomp.over(socket)
 
       stompClient.connect({}, function(frame) {
-        stompClient.subscribe('/topic/current_brew', function(data) {
-          console.log('SUBSCIBRED!!!')
+        stompClient.subscribe(URL.WS_SUBSCRIPTION, function(data) {
           var brewData = JSON.parse(data.body)
           next({ 
             type: 'NEW_BREW_DATA_PUSHED',

@@ -1,41 +1,193 @@
-.App {
+@charset 'UTF-8';
+
+html {
+  width: 100%;
+  background-color: #312D2A;
+}
+
+body {
   text-align: center;
+  font-family: 'Amatic SC', cursive;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+a {
+  text-decoration: none;
+  color: #312D2A;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App {
+  
 }
 
-.App-title {
-  font-size: 1.5em;
+.header {
+  width: 100%;
+  color: #826C53;
 }
 
-.App-intro {
-  font-size: large;
+.container {
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  width: 100%;
+}
+
+#navheader {
+  width: 100%;
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav li{
+  display: inline-block;
+  width: 100%;
+  min-width: 150px;
+  padding: 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #FFF4CA;
+  color: #312D2A;
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+#nav li a{
+  text-decoration: none;
+}
+
+#logo {
+  margin: 0 0 0 0;
+  color: #FFF4CA;
+  font-size: 3.5em;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.8em;
+  color: #FFF4CA;
+}
+
+.featurette {
+  background-color: #FFF4CA;
+  color: #FFF4CA;
+  border: 1px solid #FFF4CA;
+}
+
+.header-divider {
+  margin: 20px 0 20px 0;
+}
+
+.content-divider {
+  margin: 20px 0 20px 0;
+}
+
+.footer-divider {
+  margin: 20px 0 20px 0;
+}
+
+footer {
+  color: #FFF4CA;
+  text-align: center;
+  font-size: 1.2em;
 }
 
 .Brew-item {
-  width: 150px;
-  height: 250px;
+  display: inline-block;
+  width: 21%;
+  min-width: 200px;
+  margin: 10px;
+  padding: 10px;
+  color: #FFF4CA;
+  border: 2px solid #FFF4CA;
+  text-align: left;
+}
+
+.Brew-item > h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #FFF4CA;
+}
+
+.Brew-item > p {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.Brew-item-label {
+  width: 100%;
+  height: 20px;
+  margin: 5px 0 5px 0;
+}
+
+.Brew-item-typeIPA {
+  background-color: #D59E2F;
+}
+
+.Brew-item-typeBlonde {
+  background-color: #E4E154;
+}
+
+.Brew-item-typePorter {
+  background-color: #826C53;
+}
+
+.Brew-item-typeBlackIPA {
+  background-color: #826C53;
+}
+
+.Brew-item-typeDefault {
+  background-color: #E4E154;
 }
 
 .Brew-current {
-  background-color: red;
+  text-align: center;
 }
 
 .Brew-available {
-
+  margin: 0;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media (min-width: 992px) {
+  body{
+      text-align: left;
+  }
+  
+  .container{
+      width: 60%;
+  }
+  
+  #nav li{
+      width: 200px;
+      margin: 0 5px 0 5px;
+  }
+  
+  #nav li:first-child{
+      margin: 0 5px 0 0;
+  }
+  
+  .beer{
+      margin: 10px;
+  }
+  
+  .beerInfo{
+      font-size: 1.2em;
+  }
+  
+  .form-group-2col img{
+      display: inline-block;
+  }
 }
